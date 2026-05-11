@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🏋️ Gym AI</h2>
+
+        <a class="active">🏠 Dashboard</a>
+        <a>🤖 AI Plan</a>
+        <a>📊 Progress</a>
+        <a>🎥 Pose</a>
+        <a>🎤 Voice</a>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+            <div>
+                <h2 id="user"></h2>
+                <small>Welcome back 👋</small>
+            </div>
+
+            <div id="dayBadge" class="badge"></div>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid">
+
+            <!-- AI INPUT -->
+            <div class="card">
+                <h3>🔥 Smart AI Plan</h3>
+
+                <input id="weight" placeholder="Weight (kg)">
+                <input id="height" placeholder="Height (m)">
+
+                <select id="goal">
+                    <option value="cutting">Cut</option>
+                    <option value="bulking">Bulk</option>
+                </select>
+
+                <button onclick="plan()">Generate Plan</button>
+
+                <div id="out" class="result-box"></div>
+            </div>
+
+            <!-- CHART -->
+            <div class="card">
+                <h3>📈 Progress Analytics</h3>
+                <canvas id="chart"></canvas>
+            </div>
+
+            <!-- CALORIES -->
+            <div class="card">
+                <h3>🔥 Calories Tracker</h3>
+
+                <input id="cal" placeholder="Calories">
+                <button onclick="addCalories()">Add</button>
+
+                <div id="calOut"></div>
+            </div>
+
+            <!-- CHATBOT -->
+            <div class="card">
+                <h3>🤖 AI Chatbot</h3>
+
+                <input id="chatInput" placeholder="Ask about diet/workout">
+                <button onclick="sendMessage()">Send</button>
+
+                <div id="chatBox" class="result-box"></div>
+            </div>
+
+            <!-- POSE -->
+            <div class="card">
+                <h3>🎥 AI Pose Detection</h3>
+
+                <video id="video" autoplay></video>
+
+                <div class="rep-box">
+                    <h2>Reps</h2>
+                    <span id="rep">0</span>
+                </div>
+
+                <button onclick="startPose()">Start Camera</button>
+            </div>
+
+            <!-- VOICE -->
+            <div class="card">
+                <h3>🎤 Voice Assistant</h3>
+
+                <button onclick="voice()">Start Speaking</button>
+
+                <div id="voiceOut" class="result-box"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/pose.js"></script>
+<script src="/js/voice.js"></script>
+
+<script>
+loadUser();
+loadChart();
+</script>
+
+</body>
+</html>

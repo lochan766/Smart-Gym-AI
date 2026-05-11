@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Gym AI</title>
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h1>🏋️ Smart Gym AI</h1>
+        <p>Your AI-powered fitness assistant</p>
+        <p>Workout • Diet • Pose • Voice</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <div class="login-card">
+
+            <h2>Login</h2>
+
+            <input id="username" placeholder="Username">
+            <input id="password" type="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <div class="divider">or</div>
+
+            <button onclick="register()">Register</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/app.js"></script>
+
+<script>
+async function checkLogin(){
+    let res = await fetch("http://127.0.0.1:5000/me", {
+        credentials: "include"
+    });
+
+    let data = await res.json();
+
+    if(data.id){
+        console.log("Already logged in");
+    }
+}
+checkLogin();
+</script>
+
+</body>
+</html>

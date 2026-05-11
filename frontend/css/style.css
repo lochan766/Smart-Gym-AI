@@ -1,0 +1,189 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ===== LEFT SIDE ===== */
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.left h1 {
+    font-size: 40px;
+    color: cyan;
+}
+
+.left p {
+    color: gray;
+}
+
+/* ===== RIGHT SIDE ===== */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.2);
+    text-align: center;
+}
+
+.login-card input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(45deg, cyan, blue);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    transform: scale(1.05);
+}
+
+.divider {
+    margin: 10px 0;
+    font-size: 12px;
+    color: gray;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #020617;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: cyan;
+}
+
+.sidebar a {
+    display: block;
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar button {
+    margin-top: 20px;
+}
+
+/* ===== MAIN ===== */
+.main {
+    margin-left: 220px;
+    width: 100%;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px cyan;
+    transform: translateY(-5px);
+}
+
+/* ===== BUTTON ===== */
+button {
+    background: linear-gradient(45deg, cyan, blue);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ===== INPUT ===== */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+/* ===== RESULT BOX ===== */
+.result-box {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* ===== VIDEO ===== */
+video {
+    width: 100%;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .left {
+        text-align: center;
+        padding: 20px;
+    }
+}

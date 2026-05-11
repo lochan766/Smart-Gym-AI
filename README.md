@@ -41,7 +41,7 @@ MYSQL
 
 
 # 📸 Screenshots
-<img width="2560" height="1162" alt="Screenshot 2026-05-11 084600" src="https://github.com/user-attachments/assets/73530dad-76e7-4982-af8f-73111fc86846" />
+
 
 
 # 🔐 Login Page
